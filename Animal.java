@@ -9,32 +9,52 @@ package poo.chat;
  *
  * @author Antho
  */
-public class Chat extends Animal {
-    private String crier;
+public class Animal {
+    protected int age;
+    protected String nom,caractere,couleur;
 
     //Constructeur
-    public Chat(int age, String nom, String caractere, String couleur) {
-        super(age, nom, caractere, couleur);
-        crier = "Miaou"; 
+    public Animal(int age, String nom, String caractere, String couleur) {
+        this.age = age;
+        this.nom = nom;
+        this.caractere = caractere;
+        this.couleur = couleur;
     }
     //Fin Constructeur
 
-    public Chat(String crier, int age, String nom, String caractere, String couleur) {
-        super(age, nom, caractere, couleur);
-        this.crier = crier;
-    }
-    
-    public String getCrier() {
-        return crier;
+    public int getAge() {
+        return age;
     }
 
-    public void setCrier(String crier) {
-        this.crier = crier;
+    public void setAge(int age) {
+        this.age = age;
     }
-    
-    public String unChat(){
-        String str = super.unAnimal()+ " "+this.crier+ " est le bruit de ce chat";
-        return str;
+
+    public String getNom() {
+        return nom;
     }
-   
-}
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getCaractere() {
+        return caractere;
+    }
+
+    public void setCaractere(String caractere) {
+        this.caractere = caractere;
+    }
+
+    public String getCouleur() {
+        return couleur;
+    }
+
+    public void setCouleur(String couleur) {
+        this.couleur = couleur;
+    }
+
+    public String unAnimal(){
+        return "\t"+this.nom+" a "+this.age+" ans. Sa couleur est "+this.couleur+". Son caractère est "+this.caractere;
+                }
+    }
